@@ -3,7 +3,14 @@ services:
   jboss:
     image: quay.io/wildfly/wildfly
     volumes:
+<<<<<<< HEAD
+#      - ./target/myPack-1.war.failed:/opt/jboss/wildfly/standalone/deployments/myPack.war
+      - ./target:/opt/jboss/wildfly/standalone/deployments
+||||||| 345d1ee
+      - ./target:/opt/jboss/wildfly/standalone/deployments/
+=======
       - "./target/myPack-1.0-SNAPSHOT.war:/opt/jboss/wildfly/standalone/deployments/ROOT.war"
+>>>>>>> main
     ports:
       - "8082:8080"
   db:

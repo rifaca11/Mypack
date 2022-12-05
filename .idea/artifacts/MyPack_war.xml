@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="MyPack:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>MyPack</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+<<<<<<< HEAD:.idea/artifacts/MyPack_war.xml
+    <root id="archive" name="myPack-1.war">
+      <element id="artifact" artifact-name="MyPack:war exploded" />
+||||||| 345d1ee:.idea/artifacts/myPack_war.xml
+    <root id="archive" name="myPack-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="myPack:war exploded" />
+=======
+    <root id="archive" name="myPack-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="MyPack:war exploded" />
+>>>>>>> main:.idea/artifacts/myPack_war.xml
+    </root>
+  </artifact>
+</component>
