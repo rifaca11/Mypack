@@ -4,22 +4,21 @@
              xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd"
              version="3.0">
     <persistence-unit name="mypack">
-        <class>com.example.mypack.Model.Admin</class>
-        <class>com.example.mypack.Model.Box</class>
-        <class>com.example.mypack.Model.Center</class>
-        <class>com.example.mypack.Model.Client</class>
-        <class>com.example.mypack.Model.Driver</class>
-        <class>com.example.mypack.Model.Manager</class>
-        <class>com.example.mypack.Model.Personne</class>
-        <class>com.example.mypack.Model.Vehicle</class>
-        <!--??-->
+        <class>entities.Admin</class>
+        <class>entities.Manager</class>
+        <class>entities.Client</class>
+        <class>entities.Driver</class>
+        <class>entities.Box</class>
+        <class>entities.Vehicule</class>
+        <class>entities.Center</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://localhost:3307/mypack"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.cj.jdbc.Driver"/>
             <property name="hibernate.connection.username" value="root"/>
             <property name="hibernate.connection.password" value="koala"/>
-            <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="create"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
