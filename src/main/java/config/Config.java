@@ -12,7 +12,7 @@ public class Config {
     private static Config config = new Config();
 
     private Config(){
-        this.entityManagerFactory = Persistence.createEntityManagerFactory("mypack");
+        entityManagerFactory = Persistence.createEntityManagerFactory("mypack");
     }
 
     public EntityManagerFactory getEntityManagerFactory() {

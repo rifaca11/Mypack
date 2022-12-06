@@ -1,8 +1,6 @@
 package entities;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
+
 
 //J'ai ajouté cette classe pour aider à l'heritage
 //cette classe ne doit pas augementer à la base de données
@@ -12,19 +10,21 @@ public class Person {
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-        private Long idPerson;
+        private Long id;
         private String username;
         private String email;
         private String password;
 
-        public Long getIdPerson() {
-            return idPerson;
+        public Person() {
         }
 
-        public void setIdPerson(Long idPerson) {
-            this.idPerson = idPerson;
+        public Long getId() {
+            return id;
         }
 
+        public void setId(Long id) {
+            this.id = id;
+        }
         public String getUsername() {
             return username;
         }

@@ -7,16 +7,39 @@ import jakarta.persistence.*;
 public class Vehicule {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private type type;
+    private Long vehicle_id;
+    @Enumerated(EnumType.STRING)
+    private VehicleType vehicleType;
     private String matricule;
+    @OneToOne
+    @JoinColumn(name = "driver_id", nullable = false)
+    private Driver driver;
 
-    public Long getId() {
-        return id;
+    public Vehicule() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getVehicle_id() {
+        return vehicle_id;
+    }
+
+    public void setVehicle_id(Long vehicle_id) {
+        this.vehicle_id = vehicle_id;
+    }
+
+    public VehicleType getVehicleType() {
+        return vehicleType;
+    }
+
+    public void setVehicleType(VehicleType vehicleType) {
+        this.vehicleType = vehicleType;
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
     }
 
     public String getMatricule() {
@@ -27,14 +50,8 @@ public class Vehicule {
         this.matricule = matricule;
     }
 
-    public Vehicule.type getType() {
-        return type;
-    }
 
-    public void setType(Vehicule.type type) {
-        this.type = type;
-    }
-    enum type{
-        voiture, petit_camion, grand_camion
+    public enum VehicleType {
+        voiture, petit_camion, grand_camion;
     }
 }

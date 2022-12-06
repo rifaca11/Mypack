@@ -2,31 +2,33 @@ package entities;
 
 import jakarta.persistence.*;
 
-import java.util.List;
 
 @Entity
 @Table(name = "centers")
 public class Center {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String name;
+    private Long center_id;
+    @Basic
+    @Column (name = "center_name")
+    private String center_name;
 
-    public Long getId() {
-        return id;
+    public Center() {
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    public Long getCenter_id() {
+        return center_id;
     }
 
-    public String getName() {
-        return name;
+    public void setCenter_id(Long center_id) {
+        this.center_id = center_id;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getCenter_name() {
+        return center_name;
     }
 
-
+    public void setCenter_name(String center_name) {
+        this.center_name = center_name;
+    }
 }
